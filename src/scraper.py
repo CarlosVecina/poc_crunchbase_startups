@@ -157,8 +157,8 @@ class InvestmentFirm(DriverConn):
         cur = con.cursor()
         for round in data_list_rounds:
             cur.execute('INSERT OR IGNORE into rounds VALUES (null, ?, ?, ?, ?, ?)',
-                [round[0],
-                round[1],
+                [round[1],
+                round[0],
                 dt.date.today(),
                 round[2],
                 round[3]
