@@ -9,10 +9,6 @@ import numpy as np
 import undetected_chromedriver as uc
 from selenium import webdriver
 
-#options = webdriver.ChromeOptions()
-#options.add_argument("start-maximized")
-#driver = uc.Chrome(options=options)
-#driver.get('https://bet365.com')
 
 def get_driver(use_proxy=False):
 
@@ -35,10 +31,7 @@ def get_driver(use_proxy=False):
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         chrome_options.add_experimental_option('useAutomationExtension', False)
 
-    #chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
     chrome_options.add_argument("start-maximized")
-    #chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    #chrome_options.add_experimental_option('useAutomationExtension', False)
     driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome_options)
     driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
     "source":
@@ -46,6 +39,5 @@ def get_driver(use_proxy=False):
         "delete newProto.webdriver;"
         "navigator.__proto__ = newProto;"
     })
-    #driver = uc.Chrome(options=chrome_options)
 
     return driver

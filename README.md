@@ -1,29 +1,28 @@
 <h1 align="center">PoC Crunchbase Startup Info</h1>
 
-<h2 align="center">Python Scraper + SQLite Persistence + Deployed Shiny App Dashboard</h2>
-
-Link to Deployed App tracking both our portfolio performance and the whole Startup ecosystem: [Startup Monitoring App](https://calosvecina.shinyapps.io/poc_crunchbase_startups)
+<h2 align="center">Python Scraper + SQLite Persistence + Deployed App Startup Monitoring</h2>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/stoicaandrei/crunchbase-scraper.svg)](https://github.com/stoicaandrei/crunchbase-scraper/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/stoicaandrei/crunchbase-scraper.svg)](https://github.com/stoicaandrei/crunchbase-scraper/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 
 ## 📝 Table of Contents
 
-- [Deployed App Link](#app)
+- [Deployed App](#app)
 - [About the scraper](#about)
 - [Getting Started](#getting_started)
 
 ## 🧐 Deployed App<a name = "app"></a>
 
 This App is a monitoring platform. The dashboards join the scraper info with public datasets, ficticial financial data, and social media.
-It constitutes a 306º view of the porfolio performance and also the whole ecosystem tracking, with social media feeds, market data and a little valuation forecasting module.
+
+It constitutes a 360º view of the porfolio performance and also the whole ecosystem tracking, with social media feeds, market data and a little valuation forecasting module.
+
+Link to Deployed App: [Startup Monitoring App](https://calosvecina.shinyapps.io/poc_crunchbase_startups)
+
 
 ## 🧐 About the scraper<a name = "about"></a>
 

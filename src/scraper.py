@@ -11,16 +11,20 @@ def check_key_exits(dict, key):
     else:
         return None
 
+
 def mdy_to_ymd(d):
     return dt.datetime.strptime(d, '%b %d, %Y').strftime('%Y-%m-%d')
 
+
 driver = get_driver()
+
 
 class DriverConn():
     def __init__(self, driver) -> None:
         self.base_url = "https://crunchbase.com"
         self.organization_url = "/organization/"
         self.driver = driver
+
 
 class Organization(DriverConn):
     def __init__(self, name_url, *args, **kwargs) -> None:
@@ -29,7 +33,6 @@ class Organization(DriverConn):
         self.organization_name = ''
         self.url_subdirectory_financials = "/company_financials"
         self.url_subdirectory_people = "/people"
-
 
     def get_url(self) -> None:
         self.driver.get(self.base_url + self.organization_url + self.name)
@@ -95,6 +98,7 @@ class Organization(DriverConn):
                 ]
             )
             con.commit()
+
 
 class InvestmentFirm(DriverConn):
     def __init__(self, name_url, *args, **kwargs) -> None:
@@ -172,19 +176,17 @@ class InvestmentFirm(DriverConn):
 #        'spotify', 'supercell', 'space-exploration-technologies', 'lime', 'internxt',
 #        'onbeams', 'cabify'
 #        ]
-_list = []
 
+_list = []
 list_organizations = []
 for name in _list:
     try:
         obj = Organization(driver=driver, name_url=name)
-        #obj.upload_basic_financials()
+        obj.upload_basic_financials()
         obj.upload_people_positions()
         list_organizations.append(obj)
     except:
         pass
-
-_list = []
 
 iff = InvestmentFirm(driver=driver, name_url='the-venture-city')
 iff.upload_investment_firm()
