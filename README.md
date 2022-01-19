@@ -21,7 +21,7 @@ This App is a monitoring platform. The dashboards join the scraper info with pub
 
 It constitutes a 360º view of the porfolio performance and also the whole ecosystem tracking, with social media feeds, market data and a little valuation forecasting module.
 
-Link to Deployed App: [Startup Monitoring App](https://calosvecina.shinyapps.io/poc_crunchbase_startups)
+Link to Deployed App: [Startup Monitoring App](https://carlosvecinatebar.shinyapps.io/poc_crunchbase_startups)
 
 
 ## 🧐 About the scraper<a name = "about"></a>
